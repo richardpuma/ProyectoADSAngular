@@ -1,1 +1,23 @@
-<p>transaccion works!</p>
+<div class="container-fluid">
+	<h2 class="text-center">Transacción</h2>
+	<form  (ngSubmit)="transaccion(f)" #f="ngForm" class="login-form">
+		<div class="form-group">
+			<label for="cuentaOrigen" class="text-uppercase">Numero de Cuenta</label>
+			<input type="text" name="cuentaOrigen" placeholder="Cuenta Origen" id="cuentaOrigen" class="form-control" required ngModel>
+		</div>
+		<div class="form-group">
+			<label for="cuentaDestino" class="text-uppercase">Cuenta Destino</label>
+			<input type="text" name="cuentaDestino" placeholder="Cuenta Destino" id="cuentaDestino" class="form-control" required ngModel>
+		</div>	
+		<div class="form-group">
+			<label for="monto" class="text-uppercase">Monto</label>
+			<input type="text" name="monto" placeholder="Monto" id="monto" class="form-control" required ngModel>
+		</div>	
+		<div>
+			<label id="lblMensaje" class="lblMensaje">{{mensaje}}</label>
+		</div>
+		<div class="form-check">					
+			<button type="submit" class="btn btn-primary">Transferir</button>
+		</div>  
+	</form>
+</div>

@@ -1,3 +1,4 @@
+
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BsDatepickerModule } from 'ngx-bootstrap';
 import { TabsModule } from 'ngx-bootstrap';
@@ -6,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComboBoxDirective } from './_directive/combobox.directive';
 import { LoginService } from './_service/login.service';
+import { TransaccionService } from './_service/transaccion.service';
 import { LoginGuard } from './_service/login-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -41,7 +43,7 @@ import { ConsultaComponent } from './consulta/consulta.component';
     TabsModule.forRoot(),
     BsDatepickerModule.forRoot()
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},LoginService, LoginGuard ],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},LoginService,TransaccionService, LoginGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
