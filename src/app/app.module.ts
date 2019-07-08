@@ -19,7 +19,10 @@ import { PrincipalComponent } from './principal/principal.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { TransaccionComponent } from './transaccion/transaccion.component';
-import { ConsultaComponent } from './consulta/consulta.component';
+import { DepositoComponent } from './deposito/deposito.component';
+import { RetiroComponent } from './retiro/retiro.component';
+import { ConsultaCuentaComponent } from './consulta-cuenta/consulta-cuenta.component';
+import { ConsultaMovimientoComponent } from './consulta-movimiento/consulta-movimiento.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { ConsultaComponent } from './consulta/consulta.component';
     HeaderComponent,
     ComboBoxDirective,
     TransaccionComponent,
-    ConsultaComponent
+    DepositoComponent,
+    RetiroComponent,
+    ConsultaCuentaComponent,
+    ConsultaMovimientoComponent
   ],
   imports: [
     BrowserModule,

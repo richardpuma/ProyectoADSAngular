@@ -8,12 +8,25 @@
       <li class="nav-item active">
         <a class="nav-link" routerLink="/principal">Inicio <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/transaccion">Transacciones</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/consulta">Consultas</a>
-      </li>   
+      <li class="nav-item dropdown pl-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkOpera" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Operaciones
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkOpera">
+          <a class="dropdown-item" routerLink="/deposito">Deposito</a>
+          <a class="dropdown-item" routerLink="/retiro">Retiro</a>
+          <a class="dropdown-item" routerLink="/transaccion">Transacción</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown pl-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkConsu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Consultas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkConsu">
+          <a class="dropdown-item" routerLink="/consultaCuenta">Cuentas</a>
+          <a class="dropdown-item" routerLink="/consultaMovimiento">Movimientos</a>
+        </div>
+      </li>    
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown pl-3">
