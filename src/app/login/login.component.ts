@@ -27,13 +27,18 @@ export class LoginComponent implements OnInit {
     let contrasena = form.value.clave;
 
     this.loginService.login(nombre_usuario, contrasena, this.tipoUsuario).subscribe(data => {
-      let token = JSON.stringify(data);
-      sessionStorage.setItem("access_token", token);
-      sessionStorage.setItem("tipoUsuario", this.tipoUsuario);
+      if(data==null){
+        this.mensaje = "Credenciales incorrectas";
+      }else{
+        let token = JSON.stringify(data);
+        sessionStorage.setItem("access_token", token);
+        sessionStorage.setItem("tipoUsuario", this.tipoUsuario);
 
-      if (data) {
-        this.router.navigate(['principal']);
+        if (data) {
+          this.router.navigate(['principal']);
+        }
       }
+      
     }, err => {
       this.mensaje = "Credenciales incorrectas";
     });    
