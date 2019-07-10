@@ -9,7 +9,7 @@
 				<h3 class="text-center text-uppercase">Retiro de Dinero</h3>
 			  </div>
 			  <div class="card-body">
-				<form (ngSubmit)="transaccion(f)" #f="ngForm" class="login-form">
+				<form (ngSubmit)="retiro(f)" #f="ngForm" class="login-form">
 				  <div class="form-group ">
 					<label for="cuentaOrigen" class="text-uppercase text-info">Numero de Cuenta </label>
 					<input type="text" name="cuentaOrigen" placeholder="Cuenta Origen Ejm : 999-999-999" id="cuentaOrigen" class="form-control rounded-0 " required ngModel>
@@ -18,7 +18,7 @@
 					<label for="monto" class="text-uppercase text-info">Monto</label>
 					<input type="number" name="monto" placeholder="Monto Mayor a S/0" id="monto" class="form-control rounded-0" required ngModel>
 				  </div>
-				  <div class="alert alert-primary" role="alert" *ngIf="flag"  >
+				  <div class="alert alert-primary" role="alert"  >
 							<label id="lblMensaje" class="lblMensaje">{{mensaje}}</label>
 				  </div>
 				  <div class="form-check">					

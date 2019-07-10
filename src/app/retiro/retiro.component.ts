@@ -8,10 +8,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./retiro.component.css']
 })
 export class RetiroComponent implements OnInit {
-
+  mensaje: string; 
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
+  
+  retiro(form: NgForm) {}
 
 }

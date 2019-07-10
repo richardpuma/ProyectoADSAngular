@@ -8,10 +8,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./deposito.component.css']
 })
 export class DepositoComponent implements OnInit {
-
+  mensaje: string; 
   constructor(private router:Router) { }
 
   ngOnInit() {
   }
+
+  deposito(form: NgForm) {}
 
 }
