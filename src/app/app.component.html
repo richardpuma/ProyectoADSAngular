@@ -1,9 +1,24 @@
-<app-header *ngIf="loginService.estaLogeado()===1"></app-header>
-<div class="container">
-    <div class="row">
-        <div class="cols-md-12">
-            <router-outlet></router-outlet>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ads2019</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+        <app-header *ngIf="loginService.estaLogeado()===1"></app-header>
+        <div class="container">
+  
+           
+                    <router-outlet></router-outlet>
+            
+        
         </div>
-    </div>
-</div>
-<app-footer *ngIf="loginService.estaLogeado()===1"></app-footer>
+        <app-footer *ngIf="loginService.estaLogeado()===1"></app-footer>
+</body>
+</html>
