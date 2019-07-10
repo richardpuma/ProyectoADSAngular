@@ -28,6 +28,9 @@ export class TransaccionComponent implements OnInit {
         this.mensaje = "La Transferencia Fue Exitosa";
         this.router.navigate(['transaccion']);
         let cuentaDestino=form.value.cuentaDestino;
+        form.controls['cuentaOrigen'].setValue(""); 
+        form.controls['cuentaDestino'].setValue(""); 
+        form.controls['monto'].setValue("");        
       }
     }, err => {
       this.flag=true;
