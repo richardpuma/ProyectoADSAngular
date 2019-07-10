@@ -12,18 +12,22 @@ export class LoginService {
     constructor(private http: HttpClient, private router: Router) {
     }
 
-    login(nombre_usuario: string, contrasena: string){
+    login(nombre_usuario: string, contrasena: string, tipoUsuario: string){
         //this.logeado = true;
         //return this.logeado;
-        let body = `{"Name":"${nombre_usuario}","Password":"${contrasena}"}`;
+        let body = `{"Name":"${nombre_usuario}","Password":"${contrasena}","Type":"${tipoUsuario}"}`;
         let sbody = JSON.parse(body);
-        return this.http.post(`${this.url}/v1/auth/login`, sbody);
+        return this.http.post(`${this.url}/login`, sbody);
     }
 
     estaLogeado() {
         //return this.logeado;
         let token = sessionStorage.getItem("access_token");
         return token != null ? 1 : 0;
+    }
+
+    getTipoUsuario(){
+        return sessionStorage.getItem("tipoUsuario");
     }
 
     cerrarSesion(){

@@ -24,6 +24,7 @@ import { RetiroComponent } from './retiro/retiro.component';
 import { ConsultaCuentaComponent } from './consulta-cuenta/consulta-cuenta.component';
 import { ConsultaMovimientoComponent } from './consulta-movimiento/consulta-movimiento.component';
 import { ConsultaClienteComponent } from './consulta-cliente/consulta-cliente.component';
+import { SaldoComponent } from './saldo/saldo.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ConsultaClienteComponent } from './consulta-cliente/consulta-cliente.co
     RetiroComponent,
     ConsultaCuentaComponent,
     ConsultaMovimientoComponent,
-    ConsultaClienteComponent
+    ConsultaClienteComponent,
+    SaldoComponent
   ],
   imports: [
     BrowserModule,

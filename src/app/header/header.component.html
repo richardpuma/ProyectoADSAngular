@@ -8,14 +8,17 @@
       <li class="nav-item active">
         <a class="nav-link" routerLink="/principal">Inicio <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/saldo" *ngIf="loginService.getTipoUsuario()==='2'">Saldo</a>
+      </li>
       <li class="nav-item dropdown pl-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkOpera" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Operaciones
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkOpera">
-          <a class="dropdown-item" routerLink="/deposito">Deposito</a>
-          <a class="dropdown-item" routerLink="/retiro">Retiro</a>
-          <a class="dropdown-item" routerLink="/transaccion">Transacción</a>
+          <a class="dropdown-item" routerLink="/deposito" *ngIf="loginService.getTipoUsuario()==='2'">Deposito</a>
+          <a class="dropdown-item" routerLink="/retiro" *ngIf="loginService.getTipoUsuario()==='2'">Retiro</a>
+          <a class="dropdown-item" routerLink="/transaccion" *ngIf="loginService.getTipoUsuario()==='2'">Transacción</a>
         </div>
       </li> 
       <li class="nav-item dropdown pl-3">
@@ -23,9 +26,9 @@
           Consultas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkConsu">
-          <a class="dropdown-item" routerLink="/consultaCliente">Clientes</a>
-          <a class="dropdown-item" routerLink="/consultaCuenta">Cuentas</a>
-          <a class="dropdown-item" routerLink="/consultaMovimiento">Movimientos</a>
+          <a class="dropdown-item" routerLink="/consultaCliente" *ngIf="loginService.getTipoUsuario()==='1'">Clientes</a>
+          <a class="dropdown-item" routerLink="/consultaCuenta" *ngIf="loginService.getTipoUsuario()==='2'">Cuentas</a>
+          <a class="dropdown-item" routerLink="/consultaMovimiento" *ngIf="loginService.getTipoUsuario()==='2'">Movimientos</a>
         </div>
       </li>    
     </ul>

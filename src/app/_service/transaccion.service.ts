@@ -14,7 +14,7 @@ export class TransaccionService {
 		let body= `{"FromAccountNumber":"${cuentaOrigen}","ToAccountNumber":"${cuentaDestino}","Amount":"${monto}"}`;
 		let sbody = JSON.parse(body);
 		let access_token = JSON.parse(sessionStorage.getItem("access_token")).token;
-		return this.http.post(`${this.url}/v1/transfers`, sbody,{
+		return this.http.post(`${this.url}/transactions/transfer`, sbody,{
             headers: new HttpHeaders().set('Authorization', `bearer ${access_token}`).set('Content-Type', 'application/json')
         });
     }
