@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./transaccion.component.css']
 })
 export class TransaccionComponent implements OnInit {
-  flag:Boolean;
+  Msg:Boolean;
   mensaje: string; 
   constructor(private router: Router,private transaccionService:TransaccionService) { }
 
@@ -24,7 +24,7 @@ export class TransaccionComponent implements OnInit {
     this.transaccionService.realizarTransaccion(cuentaOrigen, cuentaDestino,monto).subscribe(data => {  
 
       if (data) {
-        this.flag=true;
+        this.Msg=true;
         this.mensaje = "La Transferencia Fue Exitosa";
         this.router.navigate(['transaccion']);
         let cuentaDestino=form.value.cuentaDestino;
@@ -33,7 +33,7 @@ export class TransaccionComponent implements OnInit {
         form.controls['monto'].setValue("");        
       }
     }, err => {
-      this.flag=true;
+      this.Msg=true;
       this.mensaje = "La Transferencia no se Realizo";
     });    
   }
