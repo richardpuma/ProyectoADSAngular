@@ -1,3 +1,4 @@
+import { ConsultaClienteComponent } from './consulta-cliente/consulta-cliente.component';
 import { ConsultaMovimientoComponent } from './consulta-movimiento/consulta-movimiento.component';
 import { ConsultaCuentaComponent } from './consulta-cuenta/consulta-cuenta.component';
 import { RetiroComponent } from './retiro/retiro.component';
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path:'retiro',component:RetiroComponent,canActivate:[LoginGuard]
+  },
+  {
+    path:'consultaCliente',component:ConsultaClienteComponent,canActivate:[LoginGuard]
   },
   {
     path:'consultaCuenta',component:ConsultaCuentaComponent,canActivate:[LoginGuard]
