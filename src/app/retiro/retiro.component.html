@@ -18,7 +18,7 @@
 					<label for="monto" class="text-uppercase text-info">Monto</label>
 					<input type="number" name="monto" placeholder="Monto Mayor a S/0" id="monto" class="form-control rounded-0" required ngModel>
 				  </div>
-				  <div class="alert alert-primary" role="alert"  >
+				  <div class="alert alert-primary" role="alert"  *ngIf="Msg" >
 							<label id="lblMensaje" class="lblMensaje">{{mensaje}}</label>
 				  </div>
 				  <div class="form-check">					

@@ -19,4 +19,21 @@ export class TransaccionService {
         });
     }
 
+    realizarDeposito(cuentaDestino: string,monto:string,tipo:string="1"){
+        let body= `{"AccountNumber":"${cuentaDestino}","Amount":"${monto}","Movement":"${tipo}"}`;
+        let sbody = JSON.parse(body);
+        let access_token = JSON.parse(sessionStorage.getItem("access_token")).token;
+		return this.http.post(`${this.url}/transactions/transaction`, sbody,{
+        headers: new HttpHeaders().set('Authorization', `bearer ${access_token}`).set('Content-Type', 'application/json')
+    });
+    }
+    realizarRetiro(cuentaOrigen: string,monto:string,tipo:string="2"){
+        let body= `{"AccountNumber":"${cuentaOrigen}","Amount":"${monto}","Movement":"${tipo}"}`;
+        let sbody = JSON.parse(body);
+        let access_token = JSON.parse(sessionStorage.getItem("access_token")).token;
+		return this.http.post(`${this.url}/transactions/transaction`, sbody,{
+        headers: new HttpHeaders().set('Authorization', `bearer ${access_token}`).set('Content-Type', 'application/json')
+    });
+    }
+
 }
