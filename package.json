@@ -23,7 +23,7 @@
     "angular2-datatable": "^0.6.0",
     "angular2-jwt": "^0.2.3",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.11",
     "ng2-completer": "^3.0.2",
     "ngx-bootstrap": "^5.0.0",
